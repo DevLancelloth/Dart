@@ -2,7 +2,7 @@
   
   # Guia de Aprendizado Dart 📚
   
-  <img src="https://dart.dev/assets/img/shared/dart/logo+text/horizontal/white.svg" alt="Dart Logo" width="400"/>
+  <img src="https://dart.dev/assets/img/shared/dart/logo+text/horizontal/white.svg" width="400"/>
   
   <p align="center">
     <a href="https://dart.dev">
