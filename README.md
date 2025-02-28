@@ -2,8 +2,6 @@
   
   # Guia de Aprendizado Dart 📚
   
-  <img src="[https://dart.dev/assets/img/shared/dart/logo+text/horizontal/white.svg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-vemjr&psig=AOvVaw07K7h2bQGjrFOdytSooG1P&ust=1740812427386000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCJrerj5YsDFQAAAAAdAAAAABAE)" width="400"/>
-  
   <p align="center">
     <a href="https://dart.dev">
       <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
@@ -39,8 +37,8 @@
 </details>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" alt="Rocket" width="25" height="25"/>
-  <strong>Vamos começar nossa jornada com Dart!</strong>
+  
+  <strong>🚀 Vamos começar nossa jornada com Dart!</strong>
 </div>
 
 ## 1. Introdução ao Dart
