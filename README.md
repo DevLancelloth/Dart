@@ -66,7 +66,7 @@
 - [3. Conceitos Básicos](#3-conceitos-básicos)
 - [4. Programação Orientada a Objetos](#4-programação-orientada-a-objetos)
 - [5. Boas Práticas](#5-boas-práticas)
-- [6. Testes](#6-testes)
+- [6. Testes e Debugging](#6-testes-e-debugging)
 - [7. Recursos Adicionais](#7-recursos-adicionais)
 
 </details>
@@ -180,137 +180,466 @@ sudo apt-get install dart
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Books" width="50"/>
+  <h3>Fundamentos da Linguagem</h3>
 </div>
 
-### 📝 Variáveis e Tipos
+### 🎯 Playground Interativo
+
+> Experimente Dart diretamente no seu navegador usando o [DartPad](https://dartpad.dev/)!
 
 <details open>
-<summary><b>Tipos Básicos e Declarações</b></summary>
+<summary><b>👨‍💻 Seu Primeiro Programa</b></summary>
 
 ```dart
-// Declaração de variáveis
-var nome = 'João';           // Inferência de tipo
-String sobrenome = 'Silva';  // Tipo explícito
-dynamic valor = 42;          // Tipo dinâmico
-final idade = 25;            // Valor imutável
-const PI = 3.14159;          // Constante em tempo de compilação
-late String descricao;       // Inicialização tardia
-
-// Tipos básicos
-int numero = 42;
-double decimal = 3.14;
-String texto = 'Olá';
-bool verdadeiro = true;
-List<int> numeros = [1, 2, 3];
-Set<String> conjunto = {'a', 'b', 'c'};
-Map<String, dynamic> mapa = {
-  'nome': 'João',
-  'idade': 25
-};
-
-// Null safety
-String? podeSerNulo;        // Pode ser nulo
-String naoPodeSerNulo = ''; // Não pode ser nulo
+void main() {
+  print('Olá, Dart! 🎯');
+  
+  // Experimente mudar o texto acima e clique em Run!
+}
 ```
 
 </details>
 
-### 📏 Estruturas de Controle
+### 📚 Tipos de Dados
+
+<div align="center">
+  <table>
+    <tr>
+      <th align="center">Tipo</th>
+      <th align="center">Exemplo</th>
+      <th align="center">Descrição</th>
+    </tr>
+    <tr>
+      <td align="center"><code>int</code></td>
+      <td align="center"><code>42</code></td>
+      <td>Números inteiros</td>
+    </tr>
+    <tr>
+      <td align="center"><code>double</code></td>
+      <td align="center"><code>3.14</code></td>
+      <td>Números decimais</td>
+    </tr>
+    <tr>
+      <td align="center"><code>String</code></td>
+      <td align="center"><code>'texto'</code></td>
+      <td>Textos</td>
+    </tr>
+    <tr>
+      <td align="center"><code>bool</code></td>
+      <td align="center"><code>true</code></td>
+      <td>Valores lógicos</td>
+    </tr>
+    <tr>
+      <td align="center"><code>List</code></td>
+      <td align="center"><code>[1, 2, 3]</code></td>
+      <td>Listas ordenadas</td>
+    </tr>
+    <tr>
+      <td align="center"><code>Map</code></td>
+      <td align="center"><code>{'chave': valor}</code></td>
+      <td>Pares chave-valor</td>
+    </tr>
+  </table>
+</div>
+
+### 🔥 Recursos Modernos
 
 <details>
-<summary><b>Controle de Fluxo</b></summary>
+<summary><b>Null Safety</b></summary>
 
 ```dart
-// If-else
-if (idade >= 18) {
-  print('Maior de idade');
-} else {
-  print('Menor de idade');
+// Variável que pode ser nula
+String? nome;
+
+// Variável que não pode ser nula
+String nomeCompleto = 'João Silva';
+
+// Operador de coalescência nula
+String resultado = nome ?? 'Nome padrão';
+
+// Operador de acesso seguro
+int? tamanho = nome?.length;
+```
+
+#### Por que usar Null Safety?
+- ✅ Previne erros em tempo de execução
+- 🔍 Código mais seguro e previsível
+- 🚀 Melhor performance
+- 💡 Detecção de erros em tempo de compilação
+
+</details>
+
+<details>
+<summary><b>Async/Await</b></summary>
+
+```dart
+Future<String> buscarDados() async {
+  // Simulando uma requisição
+  await Future.delayed(Duration(seconds: 2));
+  return 'Dados carregados!';
 }
 
-// For
-for (var i = 0; i < 5; i++) {
-  print(i);
+void main() async {
+  print('Carregando...');
+  String resultado = await buscarDados();
+  print(resultado);
 }
+```
 
-// While
-while (condicao) {
-  // código
-}
+#### Casos de Uso
+- 🌐 Requisições HTTP
+- 📁 Operações com arquivos
+- 🔄 Processamento em background
+- 📱 Animações e UI
 
-// Switch
-switch (valor) {
-  case 1:
-    print('Um');
-    break;
-  default:
-    print('Outro');
+</details>
+
+### 🎨 Exemplos Práticos
+
+<details>
+<summary><b>Manipulação de Listas</b></summary>
+
+```dart
+void main() {
+  // Criando uma lista
+  var numeros = [1, 2, 3, 4, 5];
+  
+  // Map - transformando dados
+  var dobro = numeros.map((n) => n * 2);
+  
+  // Filter - filtrando dados
+  var pares = numeros.where((n) => n % 2 == 0);
+  
+  // Reduce - reduzindo a um valor
+  var soma = numeros.reduce((a, b) => a + b);
+  
+  print('Original: $numeros');
+  print('Dobro: $dobro');
+  print('Pares: $pares');
+  print('Soma: $soma');
 }
 ```
 
 </details>
+
+<details>
+<summary><b>Programação Funcional</b></summary>
+
+```dart
+// High-order functions
+void executar(int Function(int) funcao, int valor) {
+  print(funcao(valor));
+}
+
+// Arrow functions
+var quadrado = (int x) => x * x;
+var cubo = (int x) => x * x * x;
+
+void main() {
+  executar(quadrado, 5); // 25
+  executar(cubo, 3);    // 27
+}
+```
+
+</details>
+
+### 🛠️ Ferramentas de Desenvolvimento
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://code.visualstudio.com/">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" width="40"/><br>
+          <strong>VS Code</strong>
+          <br/>
+          <sub>Editor Recomendado</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://dart.dev/tools/dart-devtools">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="40"/><br>
+          <strong>DevTools</strong>
+          <br/>
+          <sub>Debugging & Profiling</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://pub.dev">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" width="40"/><br>
+          <strong>Pub.dev</strong>
+          <br/>
+          <sub>Gerenciador de Pacotes</sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 📱 Frameworks e Bibliotecas Populares
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://flutter.dev">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png" width="40"/><br>
+          <strong>Flutter</strong>
+          <br/>
+          <sub>UI Framework</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://aqueduct.io">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Server.png" width="40"/><br>
+          <strong>Aqueduct</strong>
+          <br/>
+          <sub>Server-side Framework</sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/dart-lang/angular">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Globe%20with%20Meridians.png" width="40"/><br>
+          <strong>AngularDart</strong>
+          <br/>
+          <sub>Web Framework</sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## 4. Programação Orientada a Objetos
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Puzzle%20Piece.png" alt="POO" width="50"/>
+  <h3>Construindo com Classes e Objetos</h3>
 </div>
 
-<details open>
-<summary><b>Classes e Objetos</b></summary>
+### 🏗️ Conceitos Fundamentais
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Building%20Construction.png" width="40"/><br>
+        <strong>Classes</strong>
+        <br/>
+        <sub>Modelos para objetos</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Link.png" width="40"/><br>
+        <strong>Herança</strong>
+        <br/>
+        <sub>Reutilização de código</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" width="40"/><br>
+        <strong>Encapsulamento</strong>
+        <br/>
+        <sub>Proteção de dados</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magic%20Wand.png" width="40"/><br>
+        <strong>Polimorfismo</strong>
+        <br/>
+        <sub>Múltiplas formas</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 📚 Exemplos Práticos
+
+<details>
+<summary><b>🏭 Padrão Factory</b></summary>
 
 ```dart
-// Classes abstratas
 abstract class Animal {
   void fazerSom();
-}
-
-// Herança
-class Cachorro extends Animal {
-  @override
-  void fazerSom() {
-    print('Au au!');
-  }
-}
-
-// Interfaces
-class Voador {
-  void voar() {}
-}
-
-// Mixins
-mixin Nadador {
-  void nadar() {
-    print('Nadando...');
-  }
-}
-
-// Classe com herança e mixin
-class Pato extends Animal with Nadador implements Voador {
-  @override
-  void fazerSom() {
-    print('Quack!');
-  }
   
-  @override
-  void voar() {
-    print('Voando...');
+  // Factory Constructor
+  factory Animal.criar(String tipo) {
+    switch (tipo) {
+      case 'cachorro':
+        return Cachorro();
+      case 'gato':
+        return Gato();
+      default:
+        throw ArgumentError('Tipo de animal não suportado');
+    }
   }
 }
 
-// Construtor factory (Singleton)
-class Logger {
-  static final Logger _instance = Logger._internal();
+class Cachorro implements Animal {
+  @override
+  void fazerSom() => print('Au au! 🐕');
+}
+
+class Gato implements Animal {
+  @override
+  void fazerSom() => print('Miau! 🐱');
+}
+
+void main() {
+  final cachorro = Animal.criar('cachorro');
+  final gato = Animal.criar('gato');
   
-  factory Logger() {
-    return _instance;
-  }
-  
-  Logger._internal();
+  cachorro.fazerSom(); // Au au! 🐕
+  gato.fazerSom();     // Miau! 🐱
 }
 ```
 
 </details>
+
+<details>
+<summary><b>🎯 Padrão Singleton</b></summary>
+
+```dart
+class ConfiguracaoApp {
+  // Instância única
+  static final ConfiguracaoApp _instance = ConfiguracaoApp._internal();
+  
+  // Construtor factory
+  factory ConfiguracaoApp() {
+    return _instance;
+  }
+  
+  // Construtor privado
+  ConfiguracaoApp._internal();
+  
+  // Configurações
+  String tema = 'claro';
+  String idioma = 'pt_BR';
+  
+  void alterarTema(String novoTema) {
+    tema = novoTema;
+    print('Tema alterado para: $tema');
+  }
+}
+
+void main() {
+  final config1 = ConfiguracaoApp();
+  final config2 = ConfiguracaoApp();
+  
+  print(identical(config1, config2)); // true - mesma instância!
+  
+  config1.alterarTema('escuro');
+  print(config2.tema); // 'escuro' - compartilham estado
+}
+```
+
+</details>
+
+<details>
+<summary><b>🔄 Padrão Observer</b></summary>
+
+```dart
+// Interface para observadores
+abstract class Observer {
+  void update(String mensagem);
+}
+
+// Classe observável
+class NotificadorEventos {
+  final List<Observer> _observadores = [];
+  
+  void adicionarObservador(Observer observador) {
+    _observadores.add(observador);
+  }
+  
+  void removerObservador(Observer observador) {
+    _observadores.remove(observador);
+  }
+  
+  void notificarTodos(String mensagem) {
+    for (var observador in _observadores) {
+      observador.update(mensagem);
+    }
+  }
+}
+
+// Implementações de observadores
+class EmailObserver implements Observer {
+  @override
+  void update(String mensagem) {
+    print('📧 Email enviado: $mensagem');
+  }
+}
+
+class SMSObserver implements Observer {
+  @override
+  void update(String mensagem) {
+    print('📱 SMS enviado: $mensagem');
+  }
+}
+
+void main() {
+  final notificador = NotificadorEventos();
+  
+  final emailObs = EmailObserver();
+  final smsObs = SMSObserver();
+  
+  notificador.adicionarObservador(emailObs);
+  notificador.adicionarObservador(smsObs);
+  
+  notificador.notificarTodos('Nova atualização disponível!');
+}
+```
+
+</details>
+
+### 🎨 Design Patterns em Dart
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Factory.png" width="40"/><br>
+        <strong>Criacionais</strong>
+        <br/>
+        <sub>Factory, Builder, Singleton</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="40"/><br>
+        <strong>Estruturais</strong>
+        <br/>
+        <sub>Adapter, Bridge, Composite</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Crystal%20Ball.png" width="40"/><br>
+        <strong>Comportamentais</strong>
+        <br/>
+        <sub>Observer, Strategy, State</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 🚀 Melhores Práticas
+
+> 💡 Dicas para escrever código orientado a objetos de qualidade
+
+1. **SOLID Principles**
+   - Single Responsibility (Responsabilidade Única)
+   - Open/Closed (Aberto/Fechado)
+   - Liskov Substitution (Substituição de Liskov)
+   - Interface Segregation (Segregação de Interface)
+   - Dependency Inversion (Inversão de Dependência)
+
+2. **Clean Code**
+   - Nomes significativos
+   - Funções pequenas e focadas
+   - Comentários apenas quando necessário
+   - Formatação consistente
+   - Tratamento de erros adequado
+
+3. **Code Review Checklist**
+   - ✅ Código segue padrões SOLID
+   - ✅ Testes unitários implementados
+   - ✅ Documentação atualizada
+   - ✅ Tratamento de erros adequado
+   - ✅ Performance otimizada
 
 ## 5. Boas Práticas
 
@@ -370,36 +699,268 @@ dev_dependencies:
 
 </details>
 
-## 6. Testes
+## 6. Testes e Debugging
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Microscope.png" alt="Test" width="50"/>
+  <h3>Qualidade e Confiabilidade</h3>
 </div>
 
+### 🧪 Tipos de Testes
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Test%20Tube.png" width="40"/><br>
+        <strong>Unitários</strong>
+        <br/>
+        <sub>Testando componentes isolados</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Puzzle%20Piece.png" width="40"/><br>
+        <strong>Integração</strong>
+        <br/>
+        <sub>Testando interações</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Globe%20with%20Meridians.png" width="40"/><br>
+        <strong>E2E</strong>
+        <br/>
+        <sub>Testando o sistema completo</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 📝 Exemplos de Testes
+
 <details>
-<summary><b>Exemplos de Testes</b></summary>
+<summary><b>✨ Testes Unitários</b></summary>
 
 ```dart
 import 'package:test/test.dart';
 
+class Calculadora {
+  int somar(int a, int b) => a + b;
+  int subtrair(int a, int b) => a - b;
+  int multiplicar(int a, int b) => a * b;
+  double dividir(int a, int b) {
+    if (b == 0) throw ArgumentError('Divisão por zero!');
+    return a / b;
+  }
+}
+
 void main() {
-  test('Soma dois números', () {
-    expect(soma(2, 2), equals(4));
-  });
-  
-  group('Testes de string', () {
-    test('Converte para maiúsculo', () {
-      expect('hello'.toUpperCase(), equals('HELLO'));
+  group('Calculadora', () {
+    late Calculadora calc;
+    
+    setUp(() {
+      calc = Calculadora();
     });
     
-    test('Verifica comprimento', () {
-      expect('dart'.length, equals(4));
+    test('soma dois números corretamente', () {
+      expect(calc.somar(2, 2), equals(4));
+      expect(calc.somar(-1, 1), equals(0));
+      expect(calc.somar(0, 0), equals(0));
+    });
+    
+    test('subtrai dois números corretamente', () {
+      expect(calc.subtrair(5, 3), equals(2));
+      expect(calc.subtrair(2, 4), equals(-2));
+    });
+    
+    test('multiplica dois números corretamente', () {
+      expect(calc.multiplicar(3, 4), equals(12));
+      expect(calc.multiplicar(-2, 3), equals(-6));
+    });
+    
+    test('divide dois números corretamente', () {
+      expect(calc.dividir(6, 2), equals(3.0));
+      expect(calc.dividir(5, 2), equals(2.5));
+    });
+    
+    test('lança erro ao dividir por zero', () {
+      expect(() => calc.dividir(5, 0), throwsArgumentError);
     });
   });
 }
 ```
 
 </details>
+
+<details>
+<summary><b>🔄 Testes de Integração</b></summary>
+
+```dart
+import 'package:test/test.dart';
+
+class Usuario {
+  final String nome;
+  final int idade;
+  
+  Usuario(this.nome, this.idade);
+}
+
+class BancoDados {
+  Future<void> salvar(Usuario usuario) async {
+    // Simula salvamento no banco
+    await Future.delayed(Duration(milliseconds: 100));
+  }
+  
+  Future<Usuario> buscar(String nome) async {
+    // Simula busca no banco
+    await Future.delayed(Duration(milliseconds: 100));
+    return Usuario(nome, 25);
+  }
+}
+
+class ServicoUsuario {
+  final BancoDados db;
+  
+  ServicoUsuario(this.db);
+  
+  Future<Usuario> criarUsuario(String nome, int idade) async {
+    final usuario = Usuario(nome, idade);
+    await db.salvar(usuario);
+    return usuario;
+  }
+}
+
+void main() {
+  group('ServicoUsuario', () {
+    late BancoDados db;
+    late ServicoUsuario servico;
+    
+    setUp(() {
+      db = BancoDados();
+      servico = ServicoUsuario(db);
+    });
+    
+    test('cria e salva usuário corretamente', () async {
+      final usuario = await servico.criarUsuario('João', 30);
+      expect(usuario.nome, equals('João'));
+      expect(usuario.idade, equals(30));
+      
+      // Verifica se foi salvo
+      final usuarioSalvo = await db.buscar('João');
+      expect(usuarioSalvo.nome, equals('João'));
+    });
+  });
+}
+```
+
+</details>
+
+### 🐛 Debugging
+
+<details>
+<summary><b>Técnicas de Debug</b></summary>
+
+```dart
+// 1. Print Debugging
+void debugInfo(String message) {
+  print('🐛 DEBUG: $message');
+}
+
+// 2. Assert Statements
+void processarIdade(int idade) {
+  assert(idade >= 0, 'Idade não pode ser negativa');
+  // ... processamento
+}
+
+// 3. Try-Catch com Stack Trace
+void funcaoPerigosa() {
+  try {
+    // código que pode falhar
+    throw Exception('Algo deu errado!');
+  } catch (e, stackTrace) {
+    print('❌ Erro: $e');
+    print('📍 Stack Trace:\n$stackTrace');
+  }
+}
+
+// 4. Logging Estruturado
+enum LogLevel { info, warning, error }
+
+void log(LogLevel level, String message) {
+  final timestamp = DateTime.now();
+  final emoji = {
+    LogLevel.info: 'ℹ️',
+    LogLevel.warning: '⚠️',
+    LogLevel.error: '🚨',
+  }[level];
+  
+  print('[$timestamp] $emoji $message');
+}
+```
+
+</details>
+
+### 🔍 DevTools
+
+> O Dart DevTools oferece ferramentas poderosas para debugging e profiling
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Left.png" width="40"/><br>
+        <strong>Debugger</strong>
+        <br/>
+        <sub>Inspeção de código</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="40"/><br>
+        <strong>Performance</strong>
+        <br/>
+        <sub>Análise de desempenho</sub>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Memory%20Card.png" width="40"/><br>
+        <strong>Memory</strong>
+        <br/>
+        <sub>Análise de memória</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 📊 Cobertura de Testes
+
+```bash
+# Executar testes com cobertura
+dart test --coverage=coverage
+
+# Gerar relatório HTML
+dart pub global activate coverage
+dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage.lcov --packages=.packages --report-on=lib
+```
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Métrica</th>
+      <th>Alvo</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Cobertura de Linha</td>
+      <td>80%</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Cobertura de Branch</td>
+      <td>75%</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Cobertura de Função</td>
+      <td>90%</td>
+      <td>✅</td>
+    </tr>
+  </table>
+</div>
 
 ## 7. Recursos Adicionais
 
