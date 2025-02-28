@@ -2,6 +2,8 @@
   
   # Guia de Aprendizado Dart 📚
   
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" alt="Rocket" width="100"/>
+  
   <p align="center">
     <a href="https://dart.dev">
       <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
@@ -12,15 +14,48 @@
     <a href="https://pub.dev">
       <img src="https://img.shields.io/badge/Pub.dev-Package%20Manager-blue?style=for-the-badge" alt="Pub.dev"/>
     </a>
+    <img src="https://img.shields.io/badge/Versão-1.0.0-green?style=for-the-badge" alt="Version"/>
+    <img src="https://img.shields.io/badge/Licença-MIT-red?style=for-the-badge" alt="License"/>
   </p>
 
   <p><em>Um guia completo e interativo para aprender Dart</em></p>
 
   <br/>
   
-  [Começar](#1-introdução-ao-dart) • 
-  [Documentação](https://dart.dev/guides) • 
-  [Comunidade](https://dart.dev/community)
+  <div align="center">
+    <a href="#1-introdução-ao-dart">Começar</a> • 
+    <a href="https://dart.dev/guides">Documentação</a> • 
+    <a href="https://dart.dev/community">Comunidade</a> •
+    <a href="#5-boas-práticas">Boas Práticas</a> •
+    <a href="#7-recursos-adicionais">Recursos</a>
+  </div>
+</div>
+
+<br/>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20Book.png" width="60"/><br>
+        <strong>Aprenda</strong>
+        <br/>
+        Conceitos básicos e avançados
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="60"/><br>
+        <strong>Pratique</strong>
+        <br/>
+        Exemplos e exercícios
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Puzzle%20Piece.png" width="60"/><br>
+        <strong>Construa</strong>
+        <br/>
+        Projetos reais
+      </td>
+    </tr>
+  </table>
 </div>
 
 <details>
@@ -35,15 +70,6 @@
 - [7. Recursos Adicionais](#7-recursos-adicionais)
 
 </details>
-
-<div align="center">
-  
-  <strong>🚀 Vamos começar nossa jornada com Dart!</strong>
-</div>
-
-## 1. Introdução ao Dart
-
-> Dart é uma linguagem de programação desenvolvida pelo Google, otimizada para criar aplicativos bonitos para qualquer plataforma! 🎯
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="100"/>
@@ -64,6 +90,42 @@
 - 🔍 Null safety
 
 </details>
+
+## 1. Introdução ao Dart
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" alt="Rocket" width="25" height="25"/>
+  <h3><strong>Vamos começar nossa jornada com Dart!</strong></h3>
+</div>
+
+> 🎯 Dart é uma linguagem de programação desenvolvida pelo Google, otimizada para criar aplicativos bonitos para qualquer plataforma!
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="100"/>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/High%20Voltage.png" width="30"/><br>
+        <strong>Rápido</strong>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" width="30"/><br>
+        <strong>Seguro</strong>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Flexed%20Biceps.png" width="30"/><br>
+        <strong>Produtivo</strong>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Globe%20Showing%20Americas.png" width="30"/><br>
+        <strong>Multiplataforma</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## 2. Configuração do Ambiente
 
@@ -153,7 +215,7 @@ String naoPodeSerNulo = ''; // Não pode ser nulo
 
 </details>
 
-### 🔄 Estruturas de Controle
+### 📏 Estruturas de Controle
 
 <details>
 <summary><b>Controle de Fluxo</b></summary>
@@ -253,7 +315,8 @@ class Logger {
 ## 5. Boas Práticas
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Check%20Mark%20Button.png" alt="Check" width="50"/>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Light Bulb" width="60"/>
+  <h3>Código limpo, resultados extraordinários!</h3>
 </div>
 
 ### 📏 Convenções de Código
@@ -341,36 +404,104 @@ void main() {
 ## 7. Recursos Adicionais
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Link.png" alt="Resources" width="50"/>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Resources" width="60"/>
+  <h3>Expanda seus horizontes!</h3>
 </div>
 
 ### 📚 Documentação e Ferramentas
-- [Dart DevTools](https://dart.dev/tools/dart-devtools) - Ferramentas de desenvolvimento
-- [Pub.dev](https://pub.dev) - Repositório oficial de pacotes
-- [Dart Cheatsheet](https://dart.dev/codelabs/dart-cheatsheet)
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://dart.dev/tools/dart-devtools">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="40"/><br>
+          <strong>DevTools</strong>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://pub.dev">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" width="40"/><br>
+          <strong>Pub.dev</strong>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://dart.dev/codelabs/dart-cheatsheet">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Scroll.png" width="40"/><br>
+          <strong>Cheatsheet</strong>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ### 👥 Comunidade
-- [Comunidade Dart no Discord](https://discord.gg/Qt6DgfS)
-- [Stack Overflow - Tag Dart](https://stackoverflow.com/questions/tagged/dart)
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://discord.gg/Qt6DgfS">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Speech%20Balloon.png" width="40"/><br>
+          <strong>Discord</strong>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://stackoverflow.com/questions/tagged/dart">
+          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Stack%20of%20Books.png" width="40"/><br>
+          <strong>Stack Overflow</strong>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 💪 Como Contribuir
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Handshake.png" alt="Handshake" width="60"/>
+  <h3>Junte-se a nós!</h3>
+</div>
+
+1. 🍴 Faça um fork do projeto
+2. 🔧 Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. 💾 Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. 📤 Push para a branch (`git push origin feature/AmazingFeature`)
+5. 🔄 Abra um Pull Request
 
 ---
 
 <div align="center">
   <br/>
   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check" width="30"/>
-  <p><strong>Continue explorando e praticando!</strong></p>
+  <h3>Continue explorando e praticando!</h3>
   
   <a href="https://dart.dev/guides">
     <img src="https://img.shields.io/badge/Documentação%20Oficial-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Docs"/>
   </a>
+  
+  <br/><br/>
+  
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Star.png" alt="Star" width="24"/>
+  Se este guia foi útil, considere dar uma estrela!
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Star.png" alt="Star" width="24"/>
 
-  <p>
-    <sub>
-      Feito com ❤️ por Gabriel Ângelo - P7 - Centro Universitário de João Pessoa - Unipê
-      <br/>
-      <a href="https://github.com/dart-lang">DevLancelloth</a> •
-      <a href="https://twitter.com/dart_lang">@Dev_Lancelloth</a> •
-      <a href="https://discord.gg/Qt6DgfS">Lancelloth</a>
-    </sub>
-  </p>
+  <br/><br/>
+  
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Heart.png" alt="Heart" width="20"/>
+  <sub>
+    Feito com amor pela comunidade Dart
+    <br/>
+    <a href="https://github.com/dart-lang">GitHub</a> •
+    <a href="https://twitter.com/dart_lang">Twitter</a> •
+    <a href="https://discord.gg/Qt6DgfS">Discord</a>
+  </sub>
+  
+  <br/><br/>
+  <sub>
+    <strong>© 2024 Dart Community</strong><br/>
+    Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+  </sub>
 </div>
